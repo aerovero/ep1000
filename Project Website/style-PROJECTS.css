@@ -12,6 +12,7 @@ h1{
   background:black;
   color:white;
   font-size:30px;
+  border-radius:10px;
   
 }
 button{
@@ -64,6 +65,7 @@ button:hover{
   li a:hover:not(.active) {
     transition: background-color 0.2s,color 1s;
     background-color: #111;
+    
   }
 
   .active {

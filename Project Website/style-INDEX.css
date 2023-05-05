@@ -11,10 +11,15 @@ h1{
   background:black;
   color:white;
   font-size:30px;
+  border-radius:10px;
 }
 
-p{
+p {
   padding-left: 10px;
+  padding:20px;
+  background-color: rgba(224, 224, 224, 0.6);
+  border-radius:10px;
+
 }
 
 ul {
