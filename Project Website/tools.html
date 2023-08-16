@@ -17,25 +17,55 @@
     <p> The stepper motor rotates two sets of gears to allow them to rotate at a specific speed to ensure that one rotation of the minute hand is one hour on the hour hand.</p>
 
     <h3> Calculations</h3>
-    <p> Upon a few iterations, these are the following constants that I settled on with the calculations. 
+    <p> Upon a few iterations, these are the key numbers that will ensure the clock will function as intended:</p>
     </p>
-    <ul class = "a"> 
-      <li> Hour and Minute Gears have 90 teeth.</li>
-      <li> The Bevel Gears connecting the motor to the minute hand have 12 teeth.</li>
-      Gear Ratio for Minute Hand is 90/12
-
-    </ul>
+      
+     <p> • Hour and Minute Gears have 90 teeth.</br></p>
+     <p> • The Bevel Gears connecting the motor to the minute hand have 12 teeth.</br></p>
+     <p> • Gear Ratio for Minute Hand is 90/12 = 7.5</br></p>
+     <p> • Gear Ratio for Hour Hand is 90/1 = 90</br></p>
+     <p> • Stepper Motor takes 2048 for a full rotation.</br></p>
+      
+     <h3> Bill of Materials</h3>
+     <iframe width ="800" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQIYQW_yWoChupx69ixcQv_aCgkbbBXZd1M8pNmX0qiyCHDLbSoBtTno7VJfqSr1apKabW_kOj1XO7P/pubhtml?widget=true&amp;headers=false"></iframe>
       </div>
 
    <div class="Cad Model">
     <a name="CAD"></a>
     <h2 style="padding-top:80px;">Cad Model</h2>
     <iframe src="https://ichat3139.autodesk360.com/shares/public/SH512d4QTec90decfa6eb5be07d2ca4c7dae?mode=embed" width="1024" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
-    <p> I used Fusion 360 to create the gears and gearbox to fit all the circutry inside.</p>
+    <p> I used Fusion 360 to create the gears and gearbox to fit all the circutry inside. </p>
     <h3></h3>
   </div>
    
-    <ul>
+  <div class ="Fabrication">
+    <a name="Fabrication"></a>
+    <h2 style="padding-top:80px;">Fabrication</h2>
+    <p> Initially, the plan was to have most of the casing made via 3D printing, and have the larger gears laser cut.</br> This however resulted in some noticeable visual wear on the 3D printed gears after the board was operating. </p>
+    <p> Therefore, all the gears were 3D printed instead. </p>
+
+    <p> I found that while printing the gears, printing with a brim would result in material being stuck between the gears. </br> This would cause the gears to not function properly, and had to be re-designed to have sufficient flat surface to ensure that surface adhesion would be sufficient without a brim. </br> INSERT A PHOTO OF THE FUCKED GEAR</p>
+  </div>
+
+  <div class="Programming ">
+    <a name="pro"></a>
+    <h2 style="padding-top:80px;">Programming</h2>
+    <p> To control the stepper motor, I opted to use the powerful AccelStepper library that allows for decimal point speed control which is crucial for the accuracy of the clock.</p>
+    <iframe src=https://create.arduino.cc/editor/theflyingpenguin/a7905310-eb92-4ff9-b5f5-88fc452263c4/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>  </div>
+    <p> Integer value a is derived from the total number of steps required to rotate the minute gear by one complete revolution divided by the amount of time it should take. Do note that setSpeed runs on seconds.</p>
+  </div>
+
+  <div class ="Video">
+    <a name="Video"></a>
+    <h2 style="padding-top:80px;">Video</h2>
+      </div>
+
+      <div class ="Poster">
+        <a name="Poster"></a>
+        <h2 style="padding-top:80px;">Poster</h2>
+          </div>
+
+    <ul class = "header">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Assignments</a></li>

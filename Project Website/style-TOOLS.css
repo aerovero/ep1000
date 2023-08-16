@@ -19,7 +19,7 @@ body{
     padding-left: 10px;
   }
   
-  ul {
+  ul.header {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -50,4 +50,9 @@ body{
   .active {
     transition: opacity 0.2s;
     opacity:0.5;
+  }
+
+  ul.a {
+    list-style-type: circle;
+    float:initial
   }
